@@ -1,4 +1,3 @@
-To start project:
+Чтобы запустить домашку:
 
-$ gulp build 
-$ gulp sync
+$ gulp pug // таск cкомпилирует pug файл в index.html внутри папки dest
