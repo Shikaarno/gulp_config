@@ -1,13 +1,172 @@
 doctype
 html
 	head
-		link(rel="stylesheet", href="css/style.min.css")
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/all.min.css")
 		title
-			| PUG пробуем
+			| Каталог препроцессором
 	body
-		include common/header.pug
+		.container-center
+			header.header
+				p
+					| <i class="fas fa-truck"></i> <b>Бесплатная доставка</b> при заказе свыше <span>5000 руб.</span>
+		.container-full-size
+			.container-center
+				.container-flex-row
+					.logo
+						a(href="#")
+							| <img src="img/logo_header.png" alt="">
+					.phone_nav
+						h1
+							| <i class="fas fa-phone-alt"></i> 8(800)000-00-00
+						nav.nav_bar
+							button
+								span
+							ul
+								li
+									a(href="#")
+										| Главная
+								li
+									a(href="#")
+										| Каталог
+								li
+									a(href="#")
+										| О нас
+								li
+									a(href="#")
+										| Новости
+								li
+									a(href="#")
+										| Контакты
+					.work_time
+						p
+							| <b>пн-пт:</b> 10:00 - 18:00
+						p
+							| <b>сб:</b> 10:00 - 16:00
+						p
+							| <b>вс: выходной</b>
+				.container-flex-row
+					.social
+						ul
+							li
+								a(href="#")
+									| <i class="fab fa-facebook-f"></i>
+							li
+								a(href="#")
+									| <i class="fab fa-twitter"></i>
+							li
+								a(href="#")
+									| <i class="fab fa-vk"></i>
+					.search
+						form
+							<input type="search" placeholder="Введите название товара" class="search"><button><i class="fas fa-search"></i></button>
+					.cart
+						| <i class="fas fa-shopping-cart"><span>товаров:</span></i>
+						<a href="#">0</a>
+		.container-full-size
+			.container-center
+				.container-flex-row
+					.aside_left
+						ul
+							li
+								| КАТАЛОГ
+							li
+								a(href="")
+									| Мониторы
+							li
+								a(href="")
+									| Смартфоны
+							li
+								a(href="")
+									| Планшеты
+							li
+								a(href="")
+									| Компьютеры
+							li
+								a(href="")
+									| Ноутбуки
+							li
+								a(href="")
+									| Переферийные устройства
+						.aside_banner
+							| <p class="free">БЕСПЛАТНАЯ</p>
+							| <p class="deliver">ДОСТАВКА</p>
+							| <span>От  <b>5000</b> руб</span>
+						.aside_recommend
+							| <a href="#" class="keyboard">
+							| <img src="img/g510.png" alt="">
+							| </a>
+							| <p>Рекомендуемый</p>
+							| <span>12 000 руб.</span>
+							| <a href="#" class="product">Клавиатура Keyboard G510</a>
+						.aside_recommend
+							| <a href="#" class="dell">
+							| <img src="img/DELL3162.jpg" alt="">
+							| </a>
+							| <p>Рекомендуемый</p>
+							| <span>23 000 руб. <s> 24 700 руб.</s></span>
+							| <a href="#" class="product">Ноутбук DELL Inspiron 3162</a>
+					.catalog
+						nav.catalog_nav
+							ul
+								li
+									a(href="#")
+										| Главная
+								li
+									a(href="#")
+										| Каталог
+						.catalog_part
+							| <a href=""><img src="img/mon.jpg" alt="" title="Мониторы"></a>
+							| <p><a href="">Мониторы</a></p>
+						.catalog_part
+							| <a href=""><img src="img/pfone.jpeg" alt="" title="Смартфоны"></a>
+							| <p><a href="">Смартфоны</a></p>
+						.catalog_part
+							| <a href=""><img src="img/plan.jpg" alt="" title="Планшеты"></a>
+							| <p><a href="">Планшеты</a></p>
+						.catalog_part
+							| <a href=""><img src="img/peref.jpg" alt="" title="Переферийные устройства"></a>
+							| <p><a href="">Переферийные устройства</a></p>
+						.catalog_part
+							| <a href=""><img src="img/comps.jpg" alt="" title="Компьютеры"></a>
+							| <p><a href="">Компьютеры</a></p>
+						.catalog_part
+							| <a href=""><img src="img/notes.jpeg" alt="" title="Ноутбуки"></a>
+							| <p><a href="">Ноутбуки</a></p>
+		.container-full-size
+			.container-center
+				.container-flex-row.footer_wrap
+					.footer_menu
+						ul
+							| <li><a href="#">О нас</a></li>
+							| <li><a href="#">Доставка</a></li>
+							| <li><a href="#">Оплата</a></li>
+							| <li><a href="#">Новости</a></li>
+							| <li><a href="#">Контакты</a></li>
+					.footer_account
+						ul
+							| <li><a href="#">Вход</a></li>
+							| <li><a href="#">Регистрация</a></li>
+					.vk
+						| <img src="img/vk.jpg" alt="">
+					.logo
+						a(href="#")
+							| <img src="img/logo_header.png" alt="">
+						h2
+							| <i class="fas fa-phone-alt"></i> 8(800)000-00-00
+						p
+							| <a href="#" class="email">info@myshop.ru</a>
+							| <a href="#"><i class="fab fa-facebook-f"></i></a>
+							| <a href="#"><i class="fab fa-twitter"></i></a>
+							| <a href="#"><i class="fab fa-vk"></i></a>
+		.container-full-size
+			footer.container-center.footer
+				p
+					| © 2021 MyShop
 
-		.content
-			| test котятки test
-
-		include common/footer.pug
+//		include common/header.pug
+//
+//		.content
+//			| test котятки test
+//
+//		include common/footer.pug
