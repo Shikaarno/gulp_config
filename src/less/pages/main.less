@@ -1,0 +1,216 @@
+@import "../templates/templates.less";
+
+.header{
+	text-align: center;
+	padding: 15px 0;
+	.fa-truck{
+		color: @clrOrange;
+	}
+	p{
+		margin: 0;
+		padding: 0;
+		font-size: 1.1rem;
+	}
+	span{
+		color: @clrOrange;
+		font-weight: 600;
+	}
+}
+
+.nav_bar{
+	font-size: 1.1rem;
+	margin-top: 15px;
+	a{
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #777;
+	}
+	li:first-child a{
+	border-bottom: 2px solid #fa5a0c;
+	color: #000;
+	}
+	a:hover{
+	border-bottom: 2px solid #fa5a0c;
+	color: #000;
+	}
+}
+
+.logo, .phone_nav, .work_time, .social,
+.search, .cart {
+	box-sizing: border-box;
+	//border: 1px solid red;
+}
+
+.logo, .social{
+	width: 25%;
+}
+
+.aside_left, .catalog{
+	//border: 1px solid red;
+}
+
+.phone_nav, .search{
+	width: 60%
+}
+
+.work_time, .cart{
+	width: 15%;
+}
+
+.fa-phone-alt{
+	color: #777777;
+}
+
+h1{
+	font-size: 2rem;
+	font-weight: 500;
+	color: @clrOrange;
+	margin: 0;
+}
+
+.work_time p{
+	margin: 0;
+}
+
+@media (max-width: @desktop){
+	.container-center{
+		width: 920px;
+	}
+	.phone_nav{
+		margin: 0 auto;
+	}
+	.search{
+		width: 48%;
+		button{
+			width: 20%;
+		}
+	}
+	.cart{
+		width: 20%;
+	}
+	.work_time{
+		display: none;
+	}
+	.aside_left{
+		width: 28%;
+	}
+	.catalog{
+		width: 70%;
+		.catalog_part{
+			width: 45%;
+		}
+	}
+	.footer_wrap{
+		div{
+			width: 33%;
+		}
+		.vk{
+			display: none;
+		}
+	}
+}
+
+@media (max-width: @tablet){
+	.container-center{
+		width: 730px;
+	}
+	.logo{
+		width: fit-content;
+	}
+	.social{
+		display: none;
+	}
+	.search{
+		width: 70%;
+		button{
+			width: 20%;
+		}
+	}
+	.cart{
+		width: 28%;
+	}
+	.aside_left{
+		display: none;
+	}
+	.catalog{
+		width: 100%;
+		.catalog_part{
+			width: 31%;
+			p{
+				font-size: 0.9rem;
+			}
+		}
+	}
+}
+
+@media (max-width: @phone){
+	.container-center{
+		width: 470px;
+	}
+	.container-flex-row{
+		flex-direction: column;
+		align-items: center;
+	}
+	.header{
+		margin: 0 auto;
+		width: 240px;
+		p{
+			font-size: 1.1rem;
+			b{
+				letter-spacing: 2px;
+			}
+		}
+		.fa-truck{
+			display: none;
+		}
+	}
+	.nav_bar{
+		position: absolute;
+		right: 6px;
+		button{
+			margin-top: 15px;
+		}
+		span{
+			position: static;
+		}
+	}
+	.search{
+		margin-top: 20px;
+		width: 100%;
+		input{
+			width: 80%;
+		}
+	}
+	.cart{
+		align-self: flex-end;
+		margin: 5px 0;
+		width: 35%;
+	}
+	.catalog{
+		width: 100%;
+		.catalog_part{
+			width: 100%;
+			p{
+				font-size: 1.1rem;				
+				letter-spacing: 2px;
+			}
+		}
+	}
+	.footer_wrap{
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: space-around;
+		.footer_menu, .footer_account{
+			box-sizing: border-box;
+			width: 50%;
+		}
+		.footer_account{
+			border-right: none;
+		}
+		.logo{
+			align-self: center;
+			width: fit-content;
+			margin-top: 15px;
+		}
+	}
+}

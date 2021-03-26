@@ -13,7 +13,7 @@ const pathProject = {
 
 // минимизация картинки и перенос в нужную папку
 function dropImgs() {
-	var images = ['jpg', 'png', 'bmp'];
+	var images = ['jpg', 'png', 'bmp', 'jpeg'];
 	var path = [];
 	for ( let i = 0; i < images.length; i++ ){
 		path.push(pathProject.src + pathProject.img + "**/*." + images[i])
@@ -118,11 +118,11 @@ exports.sync = liveReload;
 //exports.drop = dropImgs;
 exports.less = lessToCss;
 exports.pug = pugCompile;
-exports.build = series(resetCss, 
-	fontAwesomeIcons, 
-	fontAwesomeFonts, 
+exports.build = series(resetCss, 	
 	bootstrapCSS, 
 	bootstrapJS, 
+	fontAwesomeIcons, 
+	fontAwesomeFonts, 
 	dropImgs, 
 	lessToCss,
 	concatCSS,
